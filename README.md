@@ -144,3 +144,29 @@ friend std::ostream& operator<<(std::ostream& os, const compressedVector<keyType
 
 [[nodiscard]] static constexpr compressedVector<keyType, valueType, arithmeticSafe, threadSafe> compressFromFileParts(std::string_view filePath,const std::vector<std::pair<const std::size_t, const std::size_t>>& ranges,const valueType& initValue = valueType(0), double* ratio = nullptr)
 ```
+
+TODO
+
+```
+constexpr void assignRangeFromArray(compressedVector<keyType, valueType, arithmeticSafe, threadSafe>& array, const keyType& fromA, const keyType& toA,const keyType& fromB, const keyType& toB)
+
+constexpr void swapRangesWithArray(const keyType& fromA, const keyType& toA, compressedVector<keyType, valueType, arithmeticSafe, threadSafe>& array, const keyType& fromB, const keyType& toB)
+
+constexpr void swapRanges(const keyType& fromA, const keyType& toA, const keyType& fromB, const keyType& toB)
+
+constexpr void copyRange(const keyType& fromA, const keyType& toA, const keyType& fromB, const keyType& toB)
+
+constexpr void increaseValueRange(const keyType& from, const keyType& to, const valueType& value, const std::size_t amount, const bool expandLeft = false)
+
+constexpr void decreaseValueRange(const keyType& from, const keyType& to, const valueType& value, const std::size_t amount, const bool shrinkRight = false)
+
+constexpr void changeValueRange(const keyType& from, const keyType& to, const valueType& value, const std::size_t newRange)
+
+constexpr void shiftRangeLeft(const keyType& from, const keyType& to, const keyType& difference = keyType(1), const valueType& fillValue = valueType(0))
+
+constexpr void shiftRangeRight(const keyType& from, const keyType& to, const keyType& difference = keyType(1), const valueType& fillValue = valueType(0))
+
+constexpr void operationWithArray(compressedVector<keyType, valueType, arithmeticSafe, threadSafe>& array, const keyType& fromArg, const keyType& toArg, const std::function<valueType(const valueType&, const valueType&)>& operation)
+
+[[nodiscard]] constexpr std::vector<std::tuple<keyType, keyType, bool>> compareWithArray(compressedVector<keyType, valueType, arithmeticSafe, threadSafe>& array, const keyType& fromArgLeft, const keyType& toArgLeft, const keyType& fromArgRight, const keyType& toArgRight, const std::function<bool(const valueType&, const valueType&)>& compareFunction = std::equal_to<valueType>{}) const
+```
