@@ -2,9 +2,16 @@
 A dynamic vector like class for handling efficiently big continuous chunks of values.
 
 If you have a huge vector that has a similar form to this:
-[1,1,...,1,1,2,2,...,2,2,5,5,...,5,5]
+
+[1,1,...,1,1,2,2,...,2,2,5,5,...,5,5,0,0,...,0]
+
 then this class is for you !!!
 
+Signature
+```
+template <BigInteger keyType = uint64_t, class valueType = int64_t, bool arithmeticSafe = false, bool threadSafe = false>
+class compressedVector
+```
 
 API
 ```
