@@ -5,6 +5,8 @@ If you have a huge vector that has a similar form to this:
 
 [1,1,...,1,1,2,2,...,2,2,5,5,...,5,5,0,0,...,0]
 
+where ... --> lots of same items,
+
 then this class is for you !!!
 
 Signature
