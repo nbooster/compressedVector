@@ -17,13 +17,13 @@ class compressedVector
 
 API
 ```C++
-constexpr compressedVector()
+constexpr compressedVector();
 
-constexpr explicit compressedVector(const valueType& initValue)
+constexpr explicit compressedVector(const valueType& initValue);
 
-constexpr compressedVector(const keyType& minIndexArg, const keyType& maxIndexArg, const valueType& initValue)
+constexpr compressedVector(const keyType& minIndexArg, const keyType& maxIndexArg, const valueType& initValue);
 
-constexpr compressedVector(keyType minIndexArg, const valueType& initValue, const std::vector<std::pair<valueType, std::size_t>>& vectorValues)
+constexpr compressedVector(keyType minIndexArg, const valueType& initValue, const std::vector<std::pair<valueType, std::size_t>>& vectorValues);
 
 constexpr compressedVector(const compressedVector<keyType, valueType, arithmeticSafe, threadSafe>& other)
 
