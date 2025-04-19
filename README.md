@@ -10,13 +10,13 @@ where ... --> lots of same items,
 then this class is for you !!!
 
 Signature
-```
+```C++
 template <BigInteger keyType = uint64_t, class valueType = int64_t, bool arithmeticSafe = false, bool threadSafe = false>
 class compressedVector
 ```
 
 API
-```
+```C++
 constexpr compressedVector()
 
 constexpr explicit compressedVector(const valueType& initValue)
@@ -156,7 +156,7 @@ friend std::ostream& operator<<(std::ostream& os, const compressedVector<keyType
 
 TODO
 
-```
+```C++
 constexpr void assignRangeFromArray(compressedVector<keyType, valueType, arithmeticSafe, threadSafe>& array, const keyType& fromA, const keyType& toA,const keyType& fromB, const keyType& toB)
 
 constexpr void swapRangesWithArray(const keyType& fromA, const keyType& toA, compressedVector<keyType, valueType, arithmeticSafe, threadSafe>& array, const keyType& fromB, const keyType& toB)
